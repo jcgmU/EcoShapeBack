@@ -94,6 +94,6 @@ POST `/api/volumen-cono`
 
 ## ✉️ Contacto
 
-Juan Carlos - [@jcgmU](https://github.com/jcgmU)
+Juan Camilo - [@jcgmU](https://github.com/jcgmU)
 
 Enlace del proyecto: [https://github.com/jcgmU/EcoShapeBack](https://github.com/jcgmU/EcoShapeBack)
