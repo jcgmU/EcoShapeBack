@@ -58,8 +58,11 @@ def resistencia_maceta():
         sigma_adm = float(data["sigma_adm"])
         if C <= 0 or H_mm <= 0 or t_mm <= 0 or sigma_adm <= 0:
             return jsonify({"error": "Todos los valores deben ser positivos."}), 400
+
         # Cálculo del sigma_max (script herramienta2_verificar_resistencia)
-        sigma_max = (C * H_mm) / t_mm
+        # Se añade la división entre 10 para ajustar a la escala deseada
+        sigma_max = (C * (H_mm / 10.0)) / t_mm
+
         cumple = sigma_max <= sigma_adm
         return jsonify(
             {"sigma_max": round(sigma_max, 2), "sigma_adm": sigma_adm, "cumple": cumple}
